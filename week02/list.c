@@ -198,6 +198,11 @@ int listCountOdds(struct node *l) {
  * @returns true if the list is sorted, false otherwise.
  */
 bool listIsSorted(struct node *l) {
+    // Edge case
+    if (l == NULL) {
+        return true;
+    };
+    
     // Base case
     if (l->next == NULL) {
         return true;
